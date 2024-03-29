@@ -97,13 +97,13 @@
       
         <h1 id="一-点9图-9-patch"><a href="#一-点9图-9-patch" class="headerlink" title="一.点9图(9-patch)"></a>一.点9图(9-patch)</h1><p> 是一种可拉伸的位图图像格式，因其必须以.9.png为扩展名进行保存而得名. 点9图的本质其实就是一张标准的PNG格式图片，而与其他普通PNG格式图片的不同之处在于，点9图在其图片的四周额外包含了1像素宽的黑色边框，用于定义图片的可拉伸的区域与可绘制的区域，以实现根据视图内容自动调整图片大小的效果.</p>
 <h1 id="二-为什么不能直接从网络加载点9图"><a href="#二-为什么不能直接从网络加载点9图" class="headerlink" title="二.为什么不能直接从网络加载点9图"></a>二.为什么不能直接从网络加载点9图</h1><p>###原因:<br>安卓在打包成apk的过程会对资源图片进行的预编译处理,而从网络直接下载的资源图片则没进行预处理.<br>只有已预编译过的点9图(源类型转换为已编译类型)才能被Android系统识别并处理,不然会没有设置的拉伸效果.</p>
-<h3 id="代码端"><a href="#代码端" class="headerlink" title="代码端:"></a>代码端:</h3><p> 还需要Android端使用 NinePatchDrawable来加载</p>
+<h3 id="代码端"><a href="#代码端" class="headerlink" title="代码端:"></a>代码端:</h3><p>还需要Android端使用 NinePatchDrawable来加载</p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/595445856">具体解析参考链接</a></p>
 <h1 id="三-点9图的预处理"><a href="#三-点9图的预处理" class="headerlink" title="三.点9图的预处理"></a>三.点9图的预处理</h1><p>使用 android sdk 中, appt 工具进行预编译处理.</p>
 <h3 id="命令"><a href="#命令" class="headerlink" title="命令:"></a>命令:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aapt s -i inputfile -o outputfile</span><br></pre></td></tr></table></figure>
 <h1 id="四-Qt环境配置"><a href="#四-Qt环境配置" class="headerlink" title="四.Qt环境配置"></a>四.Qt环境配置</h1><p>#####1.1 安装 Qt</p>
 <blockquote>
-<p>brew install qt</p>
+<p>brew install qt </p>
 </blockquote>
 <p>#####1.2 配置UI生成插件Designer</p>
 <h6 id="作用-生成弹窗代码"><a href="#作用-生成弹窗代码" class="headerlink" title="作用:  生成弹窗代码"></a>作用:  生成弹窗代码</h6><p>配置插件,在qt安装的目录下. 在pycharm设置选项中，选择Tools&gt;External Tools&gt; ‘+’ 新增扩展工具</p>
@@ -154,7 +154,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/03/27/hello-world/" data-id="clucbxp7z0000yrqu4rmw03f9" data-title="网络加载点9图预编译处理(Qt + PyCharm)" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/03/27/hello-world/" data-id="clucc45yf00008zqu7u07gwmv" data-title="网络加载点9图预编译处理(Qt + PyCharm)" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
